@@ -1,0 +1,52 @@
+[
+  {
+    "Name": "noob",
+    "Pass": "noob123",
+    "HubScore": {
+      "Points": 0,
+      "Matches": 0,
+      "Wins": 0,
+      "Defeats": 0,
+      "Ties": 0
+    },
+    "BattleshipScore": {
+      "Points": 0,
+      "Matches": 0,
+      "Wins": 0,
+      "Defeats": 0,
+      "Ties": 0
+    },
+    "TicTacToeScore": {
+      "Points": 0,
+      "Matches": 0,
+      "Wins": 0,
+      "Defeats": 0,
+      "Ties": 0
+    }
+  },
+  {
+    "Name": "faerlaz",
+    "Pass": "fa123",
+    "HubScore": {
+      "Points": 0,
+      "Matches": 0,
+      "Wins": 0,
+      "Defeats": 0,
+      "Ties": 0
+    },
+    "BattleshipScore": {
+      "Points": 0,
+      "Matches": 0,
+      "Wins": 0,
+      "Defeats": 0,
+      "Ties": 0
+    },
+    "TicTacToeScore": {
+      "Points": 0,
+      "Matches": 0,
+      "Wins": 0,
+      "Defeats": 0,
+      "Ties": 0
+    }
+  }
+]
