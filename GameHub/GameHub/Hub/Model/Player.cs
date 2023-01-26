@@ -1,5 +1,6 @@
 ﻿using GameHub.Hub.Controller;
 using GameHub.Hub.Exceptions;
+using GameHub.Hub.Util;
 
 namespace GameHub.Hub.Model;
 
@@ -14,7 +15,7 @@ public class Player
         {
             if (string.IsNullOrEmpty(value) || value.All(c => char.IsWhiteSpace(c)))
                 throw new PlayerException("\n\tO nome não pode ser nulo ou vazio.");
-            else if (value.Length < 3)
+            else if (value.Length < Constraints.MinimumNameLength)
                 throw new PlayerException("\n\tO nome deve conter no mínimo 3 caractéres.");
             else if (value.All(c => char.IsDigit(c)) || value.All(c => char.IsPunctuation(c)) || value.All(c => char.IsSymbol(c)))
                 throw new PlayerException("\n\tO nome não pode conter apenas números, pontuações ou símbolos.");
@@ -33,7 +34,7 @@ public class Player
         {
             if (string.IsNullOrEmpty(value) || value.All(c => char.IsWhiteSpace(c)))
                 throw new PlayerException("\n\tA senha não pode ser nula ou vazia.");
-            else if (value.Length < 5)
+            else if (value.Length < Constraints.MinimumPassLength)
                 throw new PlayerException("\n\tA senha deve conter no mínimo 5 caractéres.");
             else
                 _pass = value;

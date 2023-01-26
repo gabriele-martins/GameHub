@@ -1,4 +1,6 @@
-﻿namespace GameHub.Hub.Model;
+﻿using GameHub.Hub.Util;
+
+namespace GameHub.Hub.Model;
 
 public class Score
 {
@@ -13,11 +15,11 @@ public class Score
     #region Constructor
     public Score()
     {
-        Points = 0;
-        Matches = 0;
-        Wins = 0;
-        Defeats = 0;
-        Ties = 0;
+        Points = Constraints.InitialPointsNumber;
+        Matches = Constraints.InitialMatchesNumber;
+        Wins = Constraints.InitialWinsNumber;
+        Defeats = Constraints.InitialDefeatsNumber;
+        Ties = Constraints.InitialTiesNumber;
     }
     #endregion
 }

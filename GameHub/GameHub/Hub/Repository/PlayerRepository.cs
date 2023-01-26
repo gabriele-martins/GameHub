@@ -1,4 +1,5 @@
 ﻿using GameHub.Hub.Model;
+using GameHub.Hub.Util;
 using GameHub.Hub.View;
 using System.Text.Json;
 
@@ -30,7 +31,7 @@ public class PlayerRepository
         catch (Exception e)
         {
             Screen.WriteRed($"\n\t{e.Message}");
-            Thread.Sleep(2600);
+            Thread.Sleep(Constraints.TimeToWait);
         }
     }
 
@@ -53,7 +54,7 @@ public class PlayerRepository
         catch (Exception e)
         {
             Screen.WriteRed($"\n\t{e.Message}");
-            Thread.Sleep(2600);
+            Thread.Sleep(Constraints.TimeToWait);
         }
         
         return playersFromJson;

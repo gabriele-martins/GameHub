@@ -1,4 +1,6 @@
-﻿namespace GameHub.Hub.View;
+﻿using GameHub.Hub.Util;
+
+namespace GameHub.Hub.View;
 
 public static class Screen
 {
@@ -113,7 +115,7 @@ public static class Screen
             else
             {
                 WriteRed("\n\tA opção inserida é invalida.");
-                Thread.Sleep(2600);
+                Thread.Sleep(Constraints.TimeToWait);
                 continue;
             }
         }
@@ -124,25 +126,25 @@ public static class Screen
     public static void ShowPlayerAdded()
     {
         WriteGreen("\n\tJogador adicionado com sucesso.");
-        Thread.Sleep(2600);
+        Thread.Sleep(Constraints.TimeToWait);
     }
 
     public static void ShowPlayerDeleted()
     {
         WriteGreen("\n\tJogador removido com sucesso.");
-        Thread.Sleep(2600);
+        Thread.Sleep(Constraints.TimeToWait);
     }
 
     public static void ShowPlayerNameChanged()
     {
         WriteGreen("\n\tSeu nome foi alterado com sucesso.");
-        Thread.Sleep(2600);
+        Thread.Sleep(Constraints.TimeToWait);
     }
 
     public static void ShowPlayerPassChanged()
     {
         WriteGreen("\n\tSua senha foi alterada com sucesso.");
-        Thread.Sleep(2600);
+        Thread.Sleep(Constraints.TimeToWait);
     }
     #endregion
 

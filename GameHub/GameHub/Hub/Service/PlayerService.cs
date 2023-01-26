@@ -1,6 +1,7 @@
 ﻿using GameHub.Hub.Controller;
 using GameHub.Hub.Model;
 using GameHub.Hub.Repository;
+using GameHub.Hub.Util;
 using GameHub.Hub.View;
 
 namespace GameHub.Hub.Service;
@@ -20,7 +21,7 @@ public class PlayerService
             catch (Exception e)
             {
                 Screen.WriteRed(e.Message); 
-                Thread.Sleep(2600);
+                Thread.Sleep(Constraints.TimeToWait);
             }
         }
         return player.Name;
@@ -38,7 +39,7 @@ public class PlayerService
             catch (Exception e)
             {
                 Screen.WriteRed(e.Message);
-                Thread.Sleep(2600);
+                Thread.Sleep(Constraints.TimeToWait);
             }
         }
         return player.Pass;
@@ -56,7 +57,7 @@ public class PlayerService
             catch (Exception e)
             {
                 Screen.WriteRed(e.Message);
-                Thread.Sleep(2600);
+                Thread.Sleep(Constraints.TimeToWait);
             }
         }
         return player.Pass;
@@ -76,7 +77,7 @@ public class PlayerService
             catch(Exception e)
             {
                 Screen.WriteRed(e.Message);
-                Thread.Sleep(2600);
+                Thread.Sleep(Constraints.TimeToWait);
             }
         }
         return name;
@@ -96,7 +97,7 @@ public class PlayerService
             catch (Exception e)
             {
                 Screen.WriteRed(e.Message);
-                Thread.Sleep(2600);
+                Thread.Sleep(Constraints.TimeToWait);
             }
         }
         return pass;

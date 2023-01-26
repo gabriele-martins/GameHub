@@ -10,7 +10,6 @@
   <ItemGroup>
     <Folder Include="Battleship\Model\" />
     <Folder Include="Hub\Repository\Data\" />
-    <Folder Include="TicTacToe\Model\" />
   </ItemGroup>
 
 </Project>

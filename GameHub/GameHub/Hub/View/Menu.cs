@@ -1,7 +1,9 @@
 ﻿using GameHub.Hub.Controller;
 using GameHub.Hub.Exceptions;
-using GameHub.Hub.Model.Entity;
+using GameHub.Hub.Model;
 using GameHub.Hub.Service;
+using GameHub.Hub.Util;
+using GameHub.TicTacToe.View;
 
 namespace GameHub.Hub.View;
 
@@ -19,7 +21,7 @@ public class Menu
                 throw new MenuException("\n\tA opção não pode ser nula ou vazia.");
             else if (!value.All(c => char.IsDigit(c)))
                 throw new MenuException("\n\tA opção só pode conter números.");
-            else if (value.Length != 1 || int.Parse(value) > 4)
+            else if (value.Length != Constraints.OptionLength || int.Parse(value) > Constraints.MenuOptionMaximumLength)
                 throw new MenuException("\n\tA opção inserida é invalida.");
             else
                 _option = value;
@@ -43,7 +45,7 @@ public class Menu
             catch (Exception e)
             {
                 Screen.WriteRed(e.Message);
-                Thread.Sleep(2600);
+                Thread.Sleep(Constraints.TimeToWait);
             }
 
             switch (Option)
@@ -65,7 +67,7 @@ public class Menu
                     break;
             }
                 
-        } while (Option != "0");
+        } while (Option != Constraints.ZeroOption);
     }
 
     private void StartAccountMenu()
@@ -85,7 +87,7 @@ public class Menu
             catch (Exception e)
             {
                 Screen.WriteRed(e.Message);
-                Thread.Sleep(2600);
+                Thread.Sleep(Constraints.TimeToWait);
             }
 
             switch (Option)
@@ -105,9 +107,9 @@ public class Menu
                     break;
             }
 
-        } while (Option != "0");
+        } while (Option != Constraints.ZeroOption);
 
-        _option = "10";
+        _option = Constraints.ComeBackOption;
     }
 
     private void StartGameMenu()
@@ -119,26 +121,27 @@ public class Menu
             try
             {
                 Option = Console.ReadLine();
-                if (int.Parse(Option) > 2)
+                if (int.Parse(Option) > Constraints.GameMenuOptionMaximumLength)
                     throw new MenuException("\n\tA opção inserida é invalida.");
             }
             catch (Exception e)
             {
                 Screen.WriteRed(e.Message);
-                Thread.Sleep(2600);
+                Thread.Sleep(Constraints.TimeToWait);
             }
 
             switch (Option)
             {
                 case "1":
+                    TicTacToeMenu.StartTicTacToeMenu();
                     break;
                 case "2":
                     break;
             }
 
-        } while (Option != "0");
+        } while (Option != Constraints.ZeroOption);
 
-        _option = "10";
+        _option = Constraints.ComeBackOption;
     }
     #endregion
 }

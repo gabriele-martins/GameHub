@@ -2,6 +2,7 @@
 using GameHub.Hub.Model;
 using GameHub.Hub.Repository;
 using GameHub.Hub.Service;
+using GameHub.Hub.Util;
 using GameHub.Hub.View;
 
 namespace GameHub.Hub.Controller;
@@ -15,7 +16,7 @@ public class PlayerController
     #region Methods
     public static void ValidateName(string name)
     {
-        if (Players.Count == 0 || !Players.Exists(player => player.Name == name))
+        if (Players.Count == Constraints.ZeroPlayers || !Players.Exists(player => player.Name == name))
             throw new PlayerException("\n\tO nome digitado não é válido ou não foi encontrado.");
     }
 
@@ -40,12 +41,12 @@ public class PlayerController
     public static void DeletePlayer(string name, ref string optionDeleteAccount)
     {
         string option = Screen.ConfirmPlayerRemoval();
-        if(option == "S")
+        if(option == Constraints.Yes)
         {
             Players.RemoveAll(cliente => cliente.Name == name);
             PlayerRepository.Serialize(Players);
             Screen.ShowPlayerDeleted();
-            optionDeleteAccount = "0";
+            optionDeleteAccount = Constraints.ZeroOption;
         }
     }
     #endregion
