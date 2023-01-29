@@ -15,6 +15,8 @@ public class Constraints
     public static readonly int MenuOptionMaximumLength = 4;
     public static readonly int GameMenuOptionMaximumLength = 2;
     public static readonly int TimeToWait = 2600;
+    public static readonly int VictoryPoints = 3;
+    public static readonly int DefeatPoints = -1;
     public static readonly string Yes = "S";
     public static readonly string ZeroOption = "0";
     public static readonly string ComeBackOption = "10";

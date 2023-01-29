@@ -8,23 +8,9 @@ public class Screen
     #region Board
     public static void AdjustSpacesAndGridlines(int size, ref int highestPositionCharactersNumber, ref string gridSplitLine)
     {
-        string gridLines;
+        highestPositionCharactersNumber = (size*size).ToString().Length;
 
-        if (size == Constraints.MinimumBoardSize)
-        {
-            highestPositionCharactersNumber = 1;
-            gridLines = "___|";
-        }
-        else if (size < Constraints.MaximumBoardSize)
-        {
-            highestPositionCharactersNumber = 2;
-            gridLines = "____|";
-        }
-        else
-        {
-            highestPositionCharactersNumber = 3;
-            gridLines = "_____|";
-        }
+        string gridLines = new String('-', highestPositionCharactersNumber + 2) + "+";
 
         gridSplitLine = string.Concat(Enumerable.Repeat(gridLines, size));
         gridSplitLine = gridSplitLine.Remove(gridSplitLine.Length - 1);
@@ -82,8 +68,6 @@ public class Screen
 
             if (i != size - 1) 
                 Console.WriteLine("\t {0}", gridSplitLine);
-            else 
-                Console.WriteLine("\t {0}", gridSplitLine.Replace('_', ' '));
         }
     }
     #endregion
@@ -92,7 +76,7 @@ public class Screen
     public static void AskBoardSize()
     {
         Console.Clear();
-        Console.Write("\n\tDigite o tamanho do tabuleiro (de 3 à 10): ");
+        Console.Write("\n\tDigite o tamanho do tabuleiro (de 3 à 15): ");
     }
 
     public static void AskPosition(string playerName, string piece)

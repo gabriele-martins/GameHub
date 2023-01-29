@@ -139,8 +139,6 @@ public class GameService
             xPlayer.TicTacToeScore.Matches++;
             xPlayer.HubScore.Wins++;
             xPlayer.TicTacToeScore.Wins++;
-            xPlayer.HubScore.Points += 3;
-            xPlayer.TicTacToeScore.Points += 3;
 
             oPlayer.HubScore.Matches++;
             oPlayer.TicTacToeScore.Matches++;
@@ -153,8 +151,6 @@ public class GameService
             oPlayer.TicTacToeScore.Matches++;
             oPlayer.HubScore.Wins++;
             oPlayer.TicTacToeScore.Wins++;
-            oPlayer.HubScore.Points += 3;
-            oPlayer.TicTacToeScore.Points += 3;
 
             xPlayer.HubScore.Matches++;
             xPlayer.TicTacToeScore.Matches++;
@@ -167,15 +163,11 @@ public class GameService
             xPlayer.TicTacToeScore.Matches++;
             xPlayer.HubScore.Ties++;
             xPlayer.TicTacToeScore.Ties++;
-            xPlayer.HubScore.Points += 1;
-            xPlayer.TicTacToeScore.Points += 1;
 
             oPlayer.HubScore.Matches++;
             oPlayer.TicTacToeScore.Matches++;
             oPlayer.HubScore.Ties++;
             oPlayer.TicTacToeScore.Ties++;
-            oPlayer.HubScore.Points += 1;
-            oPlayer.TicTacToeScore.Points += 1;
         }
         PlayerRepository.Serialize(PlayerController.Players);
     }

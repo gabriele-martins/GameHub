@@ -1,4 +1,5 @@
-﻿using GameHub.Hub.Controller;
+﻿using GameHub.Battleship.View;
+using GameHub.Hub.Controller;
 using GameHub.Hub.Exceptions;
 using GameHub.Hub.Model;
 using GameHub.Hub.Service;
@@ -136,6 +137,7 @@ public class Menu
                     TicTacToeMenu.StartTicTacToeMenu();
                     break;
                 case "2":
+                    BattleshipMenu.StartBattleshipMenu();
                     break;
             }
 

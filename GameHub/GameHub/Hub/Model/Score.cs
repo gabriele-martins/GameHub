@@ -5,7 +5,10 @@ namespace GameHub.Hub.Model;
 public class Score
 {
     #region Properties
-    public int Points { get; set; }
+    public int Points 
+    {
+        get { return Wins * Constraints.VictoryPoints + Defeats * Constraints.DefeatPoints + Ties; }
+    }
     public int Matches { get; set; }
     public int Wins { get; set; }
     public int Defeats { get; set; }
@@ -15,7 +18,6 @@ public class Score
     #region Constructor
     public Score()
     {
-        Points = Constraints.InitialPointsNumber;
         Matches = Constraints.InitialMatchesNumber;
         Wins = Constraints.InitialWinsNumber;
         Defeats = Constraints.InitialDefeatsNumber;
