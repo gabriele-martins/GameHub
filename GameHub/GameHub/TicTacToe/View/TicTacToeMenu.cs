@@ -46,7 +46,7 @@ public class TicTacToeMenu
             switch (Option)
             {
                 case "1":
-
+                    Tutorial.ShowTicTacToeTutorial();
                     break;
                 case "2":
                     Ranking.ShowTicTacToeRanking();

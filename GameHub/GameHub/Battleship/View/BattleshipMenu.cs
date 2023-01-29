@@ -46,7 +46,7 @@ public class BattleshipMenu
             switch (Option)
             {
                 case "1":
-
+                    Tutorial.ShowBattleshipTutorial();
                     break;
                 case "2":
                     Ranking.ShowBattleshipRanking();
