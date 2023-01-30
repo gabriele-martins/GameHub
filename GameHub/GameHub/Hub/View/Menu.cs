@@ -1,4 +1,5 @@
 ﻿using GameHub.Battleship.View;
+using GameHub.Chess.View;
 using GameHub.Hub.Controller;
 using GameHub.Hub.Exceptions;
 using GameHub.Hub.Model;
@@ -138,6 +139,9 @@ public class Menu
                     break;
                 case "2":
                     BattleshipMenu.StartBattleshipMenu();
+                    break;
+                case "3":
+                    ChessMenu.StartChessMenu();
                     break;
             }
 

@@ -68,6 +68,7 @@ public static class Screen
         Console.WriteLine("\n\tEscolha uma opção:");
         Console.WriteLine("\n\t1 - Jogo da Velha");
         Console.WriteLine("\t2 - Batalha Naval");
+        Console.WriteLine("\t3 - Xadrez");
         Console.WriteLine("\t0 - Voltar para o menu principal");
         Console.Write("\n\tDigite a opção desejada: ");
     }

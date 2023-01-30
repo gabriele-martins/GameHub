@@ -44,6 +44,7 @@ public class Player
     public Score HubScore { get; set; }
     public Score BattleshipScore { get; set; }
     public Score TicTacToeScore { get; set; }
+    public Score ChessScore { get; set; }
 
     #endregion
 
@@ -53,6 +54,7 @@ public class Player
         HubScore = new Score();
         BattleshipScore = new Score();
         TicTacToeScore = new Score();
+        ChessScore = new Score();
     }
     #endregion
 
@@ -79,7 +81,13 @@ public class Player
             $"\n\tPartidas Jogadas: {TicTacToeScore.Matches}" +
             $"\n\tVitórias: {TicTacToeScore.Wins}" +
             $"\n\tDerrotas: {TicTacToeScore.Defeats}" +
-            $"\n\tEmpates: {TicTacToeScore.Ties}";
+            $"\n\tEmpates: {TicTacToeScore.Ties}" +
+            $"\n\t------------------- Xadrez --------------------" +
+            $"\n\tPontos: {ChessScore.Points}" +
+            $"\n\tPartidas Jogadas: {ChessScore.Matches}" +
+            $"\n\tVitórias: {ChessScore.Wins}" +
+            $"\n\tDerrotas: {ChessScore.Defeats}" +
+            $"\n\tEmpates: {ChessScore.Ties}";
     }
     #endregion
 }

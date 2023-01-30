@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Chess\Repository\MatchData\" />
     <Folder Include="Hub\Repository\Data\" />
   </ItemGroup>
 
